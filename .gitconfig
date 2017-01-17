@@ -5,4 +5,6 @@
 	ignored = !git ls-files -v | grep "^[[:lower:]]"
 [user]
 	name = Agnieszka Rutkowska
-	email = agnieszka@silvdev.pl
+	email = rutkowska.agnieszka91@gmail.com
+[commit]
+	template = ~/.gitmessage
