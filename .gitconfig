@@ -1,0 +1,8 @@
+[alias]
+	cleanup = !git branch --merged master | grep -v master | xargs -n 1 git branch -d
+	ignore = !git update-index --assume-unchanged
+	deignore = !git update-index --no-assume-unchanged
+	ignored = !git ls-files -v | grep "^[[:lower:]]"
+[user]
+	name = Agnieszka Rutkowska
+	email = agnieszka@silvdev.pl
