@@ -18,5 +18,7 @@ source "${GITAWAREPROMPT}/main.sh"
 export PS1="\[$txtblu\]\u@\h \[$txtpur\]\W \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
 alias gitch="git checkout"
+alias openandroid="~/Android/Sdk/platform-tools/adb tcpip 5555"
+alias connectandroid="~/androidconnect.sh"
 
 
