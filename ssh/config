@@ -1,6 +1,10 @@
-#Host bitbucket
- #   HostName bitbucket.org
-  #  IdentityFile /home/aga/.ssh/bitbucket/id_rsa
-#Host github
- #   HostName github.com
-  #  IdentityFile /home/aga/.ssh/github/id_rsa
+Host bitbucket bitbucket.org
+    HostName bitbucket.org
+    IdentityFile /home/aga/.ssh/bitbucket/id_rsa #bitbucket_rsa
+    User Loeana
+Host github github.com
+    HostName github.com
+    IdentityFile /home/aga/.ssh/github/id_rsa #github_rsa
+    User Loeana
+Host *
+    IdentityFile /home/aga/.ssh/other/id_rsa
