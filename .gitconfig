@@ -1,3 +1,10 @@
+
+[merge]
+	tool = intellij
+[mergetool "intellij"]
+	cmd = cmd.exe //c "\"C:/Program Files (x86)/JetBrains/IntelliJ IDEA Community Edition 2016.3/bin/idea.bat\" merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\""
+	trustExitCode = true
+
 [alias]
 	cleanup = !git branch --merged master | grep -v master | xargs -n 1 git branch -d
 	ignore = !git update-index --assume-unchanged
