@@ -21,4 +21,25 @@ alias gitch="git checkout"
 alias openandroid="~/Android/Sdk/platform-tools/adb tcpip 5555"
 alias connectandroid="~/androidconnect.sh"
 
+alias rebase="~/scripts/rebase.sh"
+
+function _completion() {
+ 	local cur prev opts
+ 	COMPREPLY=()
+ 	cur="${COMP_WORDS[COMP_CWORD]}"
+ 	prev="${COMP_WORDS[COMP_CWORD-1]}"
+ 	opts=$(git branch | cut -c 3-);
+
+ 	if [[ ${cur} == -* || ${COMP_CWORD} -eq 1 ]] ; then
+ 		COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+ 		return 0
+ 	fi
+
+ }
+
+complete -F _completion rebase
+_gitpull_complete() {
+    branches=$(git branch -l | cut -c3-)
+    COMPREPLY=($(compgen -W "$branches" -- "$2"))
+
 
