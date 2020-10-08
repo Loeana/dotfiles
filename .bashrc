@@ -41,5 +41,5 @@ complete -F _completion rebase
 _gitpull_complete() {
     branches=$(git branch -l | cut -c3-)
     COMPREPLY=($(compgen -W "$branches" -- "$2"))
-
+}
 
